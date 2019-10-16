@@ -4,11 +4,16 @@ categories:
   - Computer Graphics
 tags:
   - Computer Graphics
+comments: true
 ---
 
 # Computer Graphics?
 Computer graphics는 컴퓨터를 사용해서 이미지를 그리는 모든 행위를 일컫는다.  
-그 중에서도 3D computer graphics는 컴퓨터를 통해 3차원 기반의 기하학적 데이터를 2차원 기반의 이미지로 그려 출력하는 것을 뜻한다.
+그 중에서도 3D computer graphics는 컴퓨터를 통해 3차원 기반의 기하학적 데이터를 2차원 기반의 이미지로 그려 출력하는 것을 뜻한다.  
+
+| ![vector image]({{site.url}}/assets/images/model_wireframe.png){: width="320" height="300"} | ![render image]({{site.url}}/assets/images/model_rendering.png){: width="300" height="300"} |
+|:--:|:--:|
+| *Vector image* | *Raster image* |
 
 ### Vector image
 3D 게임, 애니메이션에서 사용하는 지오메트리 데이터는 데카르트 좌표계 기반의 데이터 형태로 저장되어 있다.  
@@ -20,9 +25,9 @@ Computer graphics는 컴퓨터를 사용해서 이미지를 그리는 모든 행
 
 즉, 3D computer graphics는 3D 기반의 vector image 데이터를 2D 기반의 raster image로 변환하여 출력하는 일련의 과정이라고 볼 수 있다.
 
-
+<br/>
 ---
-
+<br/>
 
 # 3D Computer Graphics Pipeline and Terms
 ## Modeling
@@ -38,10 +43,14 @@ Polygon mesh의 구성 요소는 다음과 같다.
 * Polygon: 양면의 faces, 일반적으로 face == polygon
 * Mesh: 두 개 이상의 맞닿은 faces로 구성된 오브젝트
 * Material: mesh에 적용할 material 목록, 다수의 material을 적용할 수 있음
-* UV: texture를 적용하기 위한 좌표계, mesh의 구성 vertices를 2D 기반 좌표계에 mapping
+* UV: texture를 적용하기 위한 좌표계, mesh의 구성 vertices를 2D 기반 좌표계에 mapping  
+
+| ![polygon mesh overview]({{site.url}}/assets/images/mesh_overview.png) |
+|:--:|
+| *Polygon mesh primitives (출처: [Wikipedia: Polygon Mesh](https://en.wikipedia.org/wiki/Polygon_mesh){:target="_blank"})* |
 
 ## Layout
-각 model을 화면 상 어느 위치에 출력할지 결정하는 과정이다.
+각 model을 화면 상 어느 위치에 출력할지 결정하는 과정이다.  
 Model이 scene의 어느 공간에 위치하는지, 크기는 어느 정도인지, camera는 scene의 어느 지점을 바라보는지 등을 결정한다.
 
 ## Material
@@ -54,5 +63,17 @@ Model이 scene의 어느 공간에 위치하는지, 크기는 어느 정도인�
   - Normal map
   - Specular map
 
+| ![lambert]({{site.url}}/assets/images/shader_lambert.png){: width="300" height="300"} | ![phong]({{site.url}}/assets/images/shader_phong.png){: width="302" height="300"} |
+|:--:|:--:|
+| *Lambert shader* | *Phong shader* |
+
 ## Rendering
 Model 데이터에 layout 기반으로 rasterization 후 material 값을 적용하여 화면에 출력하는 과정이다.
+
+<br/>
+---
+<br/>
+
+# References
+* Wikipedia: 3D computer graphics ([https://en.wikipedia.org/wiki/3D_computer_graphics](https://en.wikipedia.org/wiki/3D_computer_graphics){:target="_blank"})
+* Wikipedia: Polygon Mesh ([https://en.wikipedia.org/wiki/Polygon_mesh](https://en.wikipedia.org/wiki/Polygon_mesh){:target="_blank"})
