@@ -43,7 +43,7 @@ $ a_{1}x_{1} + a_{2}x_{2} + ... + a_{n}x_{n} = c $
 3. 두 직선이 겹침
 
 {% include initialize-graph %}
-{% include graph.html name="graph1" width=200 height=200 float="left" %}
+{% include graph.html name="graph1" width=200 height=200 %}
 <script>
 var graphObj = graph['graph1']
 var line1 = graphObj['svg'].append('g')
@@ -77,7 +77,7 @@ line2.append('text')
   .text('x - y = 1')
 </script>
 
-{% include graph.html name="graph2" width=200 height=200 float="left" %}
+{% include graph.html name="graph2" width=200 height=200 %}
 <script>
 var graphObj = graph['graph2']
 var line1 = graphObj['svg'].append('g')
@@ -111,7 +111,7 @@ line2.append('text')
   .text('6x + 4y = 24')
 </script>
 
-{% include graph.html name="graph3" width=200 height=200 float="left" %}
+{% include graph.html name="graph3" width=200 height=200 %}
 <script>
 var graphObj = graph['graph3']
 var line1 = graphObj['svg'].append('g')
@@ -144,3 +144,14 @@ line2.append('text')
   .style('font-weight', 'bold')
   .text('6x + 4y = 12')
 </script>
+{% include end-graph %}
+위 그래프 중 첫번째는 $ u = (k_{1}, k_{2}) $ 인 점이 두 equation의 공통된 해가 된다.  
+
+한편 두번째와 세번째 그래프는 두 linear equation의 계수들이 비례 관계 ($ \frac{a_{1,1}}{a_{2,1}} = \frac{a_{1,2}}{a_{2,2}} $)이다.  
+두 그래프의 차이점은 constant항의 비례 관계인지 여부에 따라 발생한다.  
+두번째 그래프는 constant 항은 비례 관계가 아니어서 두 직선이 평행하게 배치된다. 따라서 두 equation의 해는 존재하지 않는다.  
+반면 세번째 그래프는 constant 항이 비례 관계여서 두 직선이 겹친다. 따라서 두 equation은 무수히 많은 해를 갖게 된다.  
+
+만약 두 linear equation에서 해가 존재한다면 elimination 과정을 거쳐 해를 구할 수 있다.  
+
+## Matrix Form of General Linear System
