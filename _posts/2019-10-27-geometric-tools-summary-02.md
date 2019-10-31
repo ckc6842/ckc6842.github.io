@@ -169,16 +169,43 @@ a_{n,1} & a_{n,2} & \dots  & a_{n,n}
 =a_{1,1} a_{2,2} \dots a_{n,n}
 $$
 
-
-
 ## Inverse
+Matrix $M_{1}$에 대하여 $M_{1}M_{2} = I$가 성립할 때, $M_{2}$를 $M_{1}$의 *inverse*라 부르고, $M_{1}^{-1}$로 표시한다.  
+Matrix $M$이 square matrix이고 inverse $M^{1}$을 가질 때, $M^{1}$의 항 $a_{i, j}^{-1}은 다음과 같다.
+
+$$
+a_{i,j}^{-1} = \frac{(-1)^{i+j}|M'_{j,i}|}{|M|}
+$$
+
+분자를 보면 cofactor의 정의와 유사하다.  
+다만 i, j의 순서가 반대인데, 이는 $M$의 transpose matrix의 cofactor라고 볼 수 있다.
+따라서 $M^{-1}$은 다음과 같이 정리할 수 있다.
+
+$$
+M^{-1} = \frac{C^{T}}{|M|}
+$$
+
+여기서 $C^{T}$는 $M$의 adjoint라고 부르기도 한다.
 
 ### Inverse의 특성
-
+1. $MM^{-1} = I$이면, $M^{-1}M = I$
+2. $(M_{1}M_{2})^{-1} = M_{2}^{-1}M_{1}^{-1}$
+3. $(M^{-1})^{-1} = M$
+4. $(\alpha M)^{-1} = (1 / \alpha)M^{-1}$
 
 ### Inverse가 존재하는 조건
-
+$n \times n$ matrix $M$에서 inverse가 존재하는 조건은 다음과 같다.  
+1. $rank = n$
+2. nonsingular matrix일 때
+3. $\|M\| \neq 0$
+4. 행(열)이 linearly independent 할 때
 
 ### Singular Matrix
+Matrix $M$이 $n \times n$ square matrix이고, $|M| \neq 0$이면 *nonsingular*로 정의한다.  
+반면 이 조건을 만족하지 못하는 모든 matrix를 *singular*라고 한다.
 
-
+$n \times\ n$ matrix $M$에 대해서 nonsingular가 되기 위한 기준 조건은 다음과 같다.  
+1. $\|M\| \neq 0$
+2. $rank = n$
+3. $M^{-1}$가 존재
+4. Homogeneous system $MX = 0$의 유일한 해가 $X = 0$
