@@ -47,8 +47,8 @@ Linear space는 vector, scalar와 두 가지의 연산자로 구성된다.
 *Linear combination*은 항들의 scalar 곱들의 합으로 이루어진 항들의 집합이다.  
 $\mathbb{R}^{n}$에 속한 Vector 집합 $\mathcal{A}$: $\\{ \vec{a_{1}}, \vec{a_{2}},\dots, \vec{a_{n}} \\}$에서 vector $\vec{u} = k_{1}\vec{a_{1}} + k_{2}\vec{a_{2}} + \dots + k_{n}\vec{a_{n}}$와 같이 나타낼 수 있다.
 
-Linear space $\mathcal{V}$에 정의된 vector 집합 $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$에 대해, vector들의 모든 linear combination 집합 $S$는 그 자체로 linear space이다.  
-이 space는 $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$에 의해 *spanned* 되고, 이 집합을 $S$에 대한 *spanning set*이라 한다.  
+Linear space $\mathcal{V}$에 정의된 vector 집합 $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$에 대해, vector들의 모든 linear combination 집합 $S$는 그 자체로 또 다른 linear space를 이룬다.  
+이 space는 $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$에 의해 *spanned* 되었다고 하고, 이 집합을 $S$에 대한 *spanning set*이라 한다.  
 여기서 중요한 아이디어는 $\vec{w} = k_{1}\vec{v_{1}} + k_{2}\vec{v_{2}} + \dots + k_{n}\vec{v_{n}}$에 대한 scalar $k_{1}, k_{2}, \dots, k_{n}$을 간단히 찾음으로써, vector $\vec(w) \in S$를  $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$의 관점에서 정리할 수 있다는 것이다.
 
 
@@ -68,6 +68,11 @@ $$c_{1}\vec{v_{1}} + c_{2}\vec{v_{2}} + \dots + c_{n}\vec{v_{n}} = \vec{0}$$
 
 
 ### Basis and Dimension
+정의에 따르면, Vector 집합 $\\{ \vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{n}} \\}$가 linear space $\mathcal{V}$에 대해 linearly independent 하면서 space를 span하면, *basis*를 이룬다고 한다.  
+그리고 $\mathcal{V}$의 *dimension*은 해당 linearly indepedent한 vector들의 개수인 $n$이다.
 
+위 정의에 의해 다음과 같은 사실들이 도출된다.
 
-
+- $\mathcal{V}$ 내의 $n$보다 적은 linearly independent vector 집합은 $\mathcal{V}$를 span 하는 데에 실패한다.
+- $\mathcal{V}$ 내의 $n$보다 많은 vector 집합은 무조건 linearly dependent 하다.
+- Dimension $n$의 space $\mathcal{V}$에 대해 고유의 basis는 존재하지 않는다; $n$개의 원소를 가지는 무수히 많은 basis vector 집합들이 존재한다.
