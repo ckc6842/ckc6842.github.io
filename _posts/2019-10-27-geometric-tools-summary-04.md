@@ -66,5 +66,53 @@ One-to-one이면서 onto인 linear function $T: \mathcal{A} \rightarrow \mathcal
 $\mathbb{R}^{m}$에서 $\mathbb{R}^{n}$으로의 linear mapping은 matrix로 표현할 수 있다.  
 즉, $\mathcal{A}$에 속한 vector가 $\mathcal{B}$에 속하는 vector에 어떻게 대응되는지 matrix를 통해 나타낼 수 있다.
 
+Basis vectors $\vec{u_{1}}, \vec{u_{2}}, \dots, \vec{u_{m}}$을 가진 linear space $\mathcal{A}$와, $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$를 가진 $\mathcal{B}$에 대해 linear mapping $T: \mathcal{A} \rightarrow \mathcal{B}$를 가정해보자.  
+Map 된 base vectors $T(\vec{u_{1}}), T(\vec{u_{2}}), \dots, T(\vec{u_{m}})$는 $\mathcal{B}$의 원소이다.  
+따라서 이는 $\mathcal{B}$의 basis vectors $\vec{v_{1}}, \vec{v_{2}}, \dots, \vec{v_{m}}$의 linear combination으로 표현할 수 있다.
+
+$$
+T(\vec{u_{1}}) = a_{1,1}\vec{v_{1}} + a_{1,2}\vec{v_{2}} + \dots + a_{1,n}\vec{v_{n}} \\
+T(\vec{u_{2}}) = a_{2,1}\vec{v_{1}} + a_{2,2}\vec{v_{2}} + \dots + a_{2,n}\vec{v_{n}} \\
+\vdots \\
+T(\vec{u_{m}}) = a_{m,1}\vec{v_{1}} + a_{m,2}\vec{v_{2}} + \dots + a_{m,n}\vec{v_{n}} \\
+$$
+
+위 linear combination의 coefficient들을 이용해 $T$를 matrix로 표현할 수 있다.
+
+$$
+T = 
+\begin{bmatrix}
+a_{1,1} & a_{1,2} & \dots  & a_{1,n} \\
+a_{2,1} & a_{2,2} & \dots  & a_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{m,1} & a_{m,2} & \dots  & a_{m,n}
+\end{bmatrix}
+$$
+
+위 결과에서 두 가지 중요한 점을 확인할 수 있다.
+
+1. $\mathcal{A}$에 속한 vector의 matrix 표현은 space $\mathcal{B}$와 $T$를 곱한 것으로 나타낼 수 있다.
+
+$$
+T(\vec{x}) =
+\begin{bmatrix}
+x_{1} & x_{2} & \dots & x_{m}
+\end{bmatrix}
+\begin{bmatrix}
+a_{1,1} & a_{1,2} & \dots  & a_{1,n} \\
+a_{2,1} & a_{2,2} & \dots  & a_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{m,1} & a_{m,2} & \dots  & a_{m,n}
+\end{bmatrix}
+$$
+
+1. 두 linear mapping의 composition을 matrix로 표현할 때는 각 mapping들의 matrix 표현을 연속해서 나타낸다.  
+Linear space $\mathcal{A}, \mathcal{B}, \mathcal{C}$와 이에 대한 linear mapping $T: \mathcal{A} \rightarrow \mathcal{B}$, $S: \mathcal{B} \rightarrow \mathcal{C}$를 가정해보자.  
+$T$와 $S$의 composition인 linear mapping $R: \mathcal{A} \rightarrow \mathcal{C}$는 아래와 같이 표현할 수 있다.
+
+$$
+S(T(\vec{v})) = \vec{v} TS
+$$
+
 ## Cramer의 법칙
 
