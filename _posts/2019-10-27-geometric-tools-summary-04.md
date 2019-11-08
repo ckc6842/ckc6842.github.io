@@ -115,4 +115,82 @@ S(T(\vec{v})) = \vec{v} TS
 $$
 
 ## Cramer의 법칙
+Cramer의 법칙은 해가 유일한 linear equation들의 system을 계산하기 위한 방법이다.  
+두 변수를 갖는 linear system
 
+$$
+a_{1,1}x_{1} + a_{1,2}x_{2} = c_{1}
+a_{2,1}x_{1} + a_{2,2}x_{2} = c_{2}
+$$
+
+에서, $a_{1,1}a_{2,2} - a_{2,1}a_{1,2} \neq 0$ 일 때, $x_{1}, x_{2}$는 determinant들로 표현할 수 있다.  
+
+$$
+x_{1} = \frac
+{\begin{vmatrix}
+c_{1} & a_{1,2} \\
+c_{2} & a_{2,2}
+\end{vmatrix}}
+{\begin{vmatrix}
+a_{1,1} & a_{1,2} \\
+a_{2,1} & a_{2,2}
+\end{vmatrix}}
+, x_{2} = \frac
+{\begin{vmatrix}
+a_{1,1} & c_{1} \\
+a_{2,1} & c_{2}
+\end{vmatrix}}
+{\begin{vmatrix}
+a_{1,1} & a_{1,2} \\
+a_{2,1} & a_{2,2}
+\end{vmatrix}}
+$$
+
+### Example
+
+$$
+3x + 2y = 6 \\
+x - y = 1
+$$
+
+에 대해 Cramer의 법칙을 적용하면,
+
+$$
+x_{1} = \frac
+{\begin{vmatrix}
+6 & 2 \\
+1 & -1
+\end{vmatrix}}
+{\begin{vmatrix}
+3 & 2 \\
+1 & -1
+\end{vmatrix}}
+= \frac{8}{5}
+$$
+
+$$
+x_{1} = \frac
+{\begin{vmatrix}
+3 & 6 \\
+1 & 1
+\end{vmatrix}}
+{\begin{vmatrix}
+3 & 2 \\
+1 & -1
+\end{vmatrix}}
+= frac{3}{5}
+$$
+
+과 같은 결과를 얻을 수 있다.
+
+### General Form
+$A$가 coefficient matrix $A = [A_{i,j}]$이고, $B_{i}$가 $A$의 $i$번째 열을 constant $c_{1}, c_{2}, \dots, c{n}$으로 대체한 matrix일 때, $|A| \neq 0이면 유일한 해인
+
+$$
+\vec{u} = (\frac{|B_{1}|}{|A|}, \frac{|B_{2}|}{|A|}, \dots, \frac{|B_{n}|}{|A|})
+$$
+
+가 존재한다.
+
+한편, $n \times n$ system에서 Cramer의 법칙의 시간복잡도는 $O(n!)$이고, Gaussian elimination은 $O(n^{3})$이다.  
+따라서 크기가 작은 linear system에서는 Cramer의 법칙이 유리하고, 큰 경우는 Gaussian elimination이 유리하다.
