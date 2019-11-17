@@ -49,11 +49,20 @@ $$
 
 Linearly independent 하기 위해서는 주어진 $\vec{w}$에 대해 $x_{i}$는 고유해야 한다.  
 <!-- $V = \\{ \vec{v_{1}}, \vec{v_{2}}, \cdots, \vec{v_{n}} \\} \in \mathcal{V}$ -->
-여기서 $x_{i}\vec{v_{i}}$를 $\vec{w}$의 *components*라고 부르고, 계수 $x_{i}$를 $vec{w}$의 *coordinates*라고 부른다.
+여기서 $x_{i}\vec{v_{i}}$를 $\vec{w}$의 *components*라고 부르고, 계수 $x_{i}$를 $\vec{w}$의 *coordinates*라고 부른다.
+
+$\vec{u}, \vec{v}$가 span하는 Space $\mathcal{V}$ 상에 있는 vector $\vec{w}$는 
+basis vector들의 고유한 linear combination으로 나타낼 수 있다(예: $\vec{w} = 3\vec{u} + 2\vec{v}$).
 
 ## Orientation
+Linearly independent한 두 3차원 vector $\vec{u}, \vec{v}$는 앞서 살펴본 것과 같이 2차원 space 내에 존재한다.  
+이 때 두 vector는 $\theta_{\vec{u}\vec{v}}$의 각을 이룬다.  
+일반적으로 두 vector의 각도는 vector가 쓰여진 순서로 다루고, 2차원 공간 상에서 반시계 방향으로 양의 크기를 가진다.  
+
+이제 3차원 공간 상에 존재하는 세 개의 3차원 vector가 이루는 각도를 생각해보자.  
 
 ## Change of Basis
+
 
 ## Linear Transformations
 
