@@ -58,10 +58,32 @@ basis vector들의 고유한 linear combination으로 나타낼 수 있다(예: 
 Linearly independent한 두 3차원 vector $\vec{u}, \vec{v}$는 앞서 살펴본 것과 같이 2차원 space 내에 존재한다.  
 이 때 두 vector는 $\theta_{\vec{u}\vec{v}}$의 각을 이룬다.  
 일반적으로 두 vector의 각도는 vector가 쓰여진 순서로 다루고, 2차원 공간 상에서 반시계 방향으로 양의 크기를 가진다.  
+하지만 3차원으로 놓고 보면 이 2차원 공간은 바라보는 시점에 따라 방향이 반대가 될 수 있다.
 
 이제 3차원 공간 상에 존재하는 세 개의 3차원 vector가 이루는 각도를 생각해보자.  
+Linealy independent한 $\vec{u}, \vec{v}, \vec{w}$가 있을 때 basis에 대한 각도 *sign*은 다음과 같이 정의할 수 있다.
+
+$$
+sgn(\vec{u}, \vec{v}, \vec{w}) = sgn(\theta_{\vec{u}\vec{v}})
+$$
+
+일반적으로 3차원 공간에서 각도의 방향을 따질 때는 "오른 손의 법칙"을 따른다.  
+엄지가 가리키는 방향에 따라 나머지 네 손가락이 가리키는 방향이 각도의 양의 크기를 갖게 된다.
+
 
 ## Change of Basis
+앞서 살펴본 바와 같이 특정 space 내의 모든 vector들은 basis vector들의 집합으로 이루어진 고유한 linear combination를 갖는다.  
+하지만 이는 모든 vector가 고유한 linear combination을 갖는다는 뜻은 아니다.  
+$n$차원 vector sapce $\mathcal{V}$에 대해, $\mathcal{V}$에 linearly independent한 $n$-ary 부분 집합의 수는 무한히 많다.  
+즉, $\vec{w} \in \mathcal{V}$는 임의로 고른 basis bector 집합의 linear combination으로 표현할 수 있다는 뜻이다.  
+
+$\mathcal{V}$에 대한 basis vector 집합 $\vec{a_{1}}, \vec{a_{2}}, \dots, \vec{a_{n}}$와 $\vec{b_{1}}, \vec{b_{2}}, \dots, \vec{b_{n}}$을 가정해보자.  
+$\mathcal{V}$내의 어느 vector든 basis vector 들로 표현할 수 있고, 또한 이 vector는 basis vector들의 또 다른 집합을 만든다.  
+즉, $\vec{a}$의 각각은 $\vec{b}$로 구성된 basis로 표현할 수 있다.
+
+$$
+\vec{a_{k}} = c_{1,k}\vec{b_{1}} + c_{2,k}\vec{b_{2}} + \cdots + c_{n,k}\vec{b_{n}}
+$$
 
 
 ## Linear Transformations
