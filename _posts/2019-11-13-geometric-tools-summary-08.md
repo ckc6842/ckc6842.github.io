@@ -85,6 +85,24 @@ $$
 \vec{a_{k}} = c_{1,k}\vec{b_{1}} + c_{2,k}\vec{b_{2}} + \cdots + c_{n,k}\vec{b_{n}}
 $$
 
+여기서 $\vec{w} \in \mathcal{V}$는 $\vec{a_{1}}, \vec{a_{2}}, \dots, \vec{a_{n}}$의 linear combination에 $\vec{a_{k}}$로 구성된 상기 식을 대입한 형태로 나타낼 수 있다.
+
+$$
+\begin{aligned}
+& \vec{w} & = & d_{1}\vec{a_{1}} + d_{2}\vec{a_{2}} + \cdots + d_{n}\vec{a_{n}} \\
+&         & = & d_{1}(c_{1,1}\vec{b_{1}} + c_{2,1}\vec{b_{2}} + \cdots + c_{n,1}\vec{b_{n}}) \\
+&         &   & + d_{2}(c_{1,2}\vec{b_{1}} + c_{2,2}\vec{b_{2}} + \cdots + c_{n,2}\vec{b_{n}}) \\
+&         &   & + \cdots + d_{n}(c_{1,n}\vec{b_{1}} + c_{2,n}\vec{b_{2}} + \cdots + c_{n,n}\vec{b_{n}}) \\
+&         & = & (d_{1}c_{1,1} + d_{2}c_{1,2} + \cdots + d_{n}c_{1,n})\vec{b_{1}} \\
+&         &   & + (d_{1}c_{2,1} + d_{2}c_{2,2} + \cdots + d_{n}c_{2,n})\vec{b_{2}} \\
+&         &   & + \cdots + (d_{1}c_{n,1} + d_{2}c_{n,2} + \cdots + d_{n}c_{n,n})\vec{b_{n}} \\
+\end{aligned}
+$$
 
 ## Linear Transformations
+Vector space에서의 linear transformation은 한 vecotr space를 다른 vector space로 mapping 하는 것을 의미한다.  
+공식적으로, 두 vector space $\mathcal{U}, \mathcal{V}$ 간의 linear transformation은 아래와 같은 조건을 만족하는 map $\mathcal{T}: \mathcal{U} \rightarrow \mathcal{V}$이다.
+1. 모든 vector $\vec{u}, \vec{v} \in \mathcal{V}$에 대해, $T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v})$
+2. 모든 $\alpha \in \mathbb{R}$와 $\vec{u} \in \mathcal{V}$에 대해, $T(\alpha\vec{u} = \alpha T(\vec{u})$
 
+Linear transformation은 *preserve linear combination*이라고 부르기도 한다.  
