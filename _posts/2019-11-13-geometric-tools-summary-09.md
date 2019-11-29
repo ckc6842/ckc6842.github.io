@@ -89,9 +89,69 @@ $$
 \alpha_{1}P_{1} + \alpha_{2}P_{2} + \cdots + \alpha_{n}P_{n}
 $$
 
+
 ## Euclidian Geometry
 
+
 ### Scalar Product
+Scalar product는 일반적으로 *dot product*로 많이 알려져 있는 *inner product*의 일종이다.  
+이 챕터에서 알아야 할 주요 기호들은 다음과 같다.
+
+* $\vec{u}$의 길이: $\|\|n\|\|$
+* $\vec{u}$의 방향: dir$(\vec{u})$
+* Scalar의 부호: sgn$(\alpha)$
+* $\vec{u}$와 $\vec{v}$가 수직: $\vec{u}\perp\vec{v}$
+* $\vec{u}$와 $\vec{v}$가 평행: $\vec{u} \|\| \vec{v}$
+
+Scalar product 전에 vector 간의 *projection*에 대해 먼저 알아보자.  
+
+두 vector $\vec{u}, \vec{v}$가 있을 때 두 vector 사이의 거리를 $\theta$라 하자.  
+Vector $\vec{v}$는 $\vec{u}$와 관련된 두 요소로 나타낼 수 있다.
+
+* $\vec{u}$로의 수직 vector $\vec{v}_{\perp}$: *normal component*
+* $\vec{u}$로의 수평 vector $\vec{v}_{\|\|}$: *orthogonal projection*
+*
+
+여기서 $$\vec{v}_{\perp} + \vec{v}_{\|} = \vec{v}$$ 이다.  
+
+먼저 $\vec{v}_{\perp}$와 $$\vec{v}_{\|}$$의 길이를 살펴보자
+
+$$
+\|\vec{v}_{\perp}\| = \|\vec{v}\| |sin\theta| \\
+\|\vec{v}_{\|}\| = \|\vec{v}\| |cos\theta|
+$$
+
+$\hat{u} = \frac{\vec{u}}{\|\|\vec{u}\|\|}$가 unit vector이고 $\vec{u}$와 같은 방향일 때,
+
+$$
+\vec{v}_{\|} = \|\vec{v}\|cos\theta\hat{u}
+$$
+
+가 성립한다.  
+
+Dot product는 다음과 같은 중요한 특성들을 가지고 있다.
+
+1. 정의: $\vec{u}\cdot\vec{v} = \|\|\vec{u}\|\|\|\|\vec{v}\|\|cos\theta$
+2. 쌍선형: $\forall\alpha\beta \in \mathbb{R}$, $\forall\vec{u},\vec{v},\vec{w} \in \mathcal{A}.\mathcal{V}$,
+   1. $(\alpha\vec{u} + \beta\vec{v})\cdot\vec{w} = \alpha(\vec{u}\cdot\vec{w}) + \beta(\vec{v}\cdot\vec{w})$
+   2. $\vec{u}\cdot(\alpha\vec{v} + \beta\vec{w}) = \alpha(\vec{u}\cdot\vec{v}) + \beta(\vec{u}\cdot\vec{w})$
+3. Positive definiteness
+   1. $\forall\vec{u} \in \mathcal{A.V}, \vec{u} \neq \vec{0}, \vec{u}\cdot\vec{u} \gt 0$
+   2. $\vec{0}\cdot\vec{0} = 0$
+4. 교환법칙: $\vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u}$
+5. vector 덧셈에 대한 dot product의 분배법칙: $\vec{u}\cdot(\vec{v} + \vec{w}) = (\vec{u}\cdot\vec{v}) + (\vec{u}\cdot\vec{w})$
+6. dot product에 대한 vector 덧셈의 분배법칙: $(\vec{u} + \vec{v})\cdot\vec{w} = \vec{u}\cdot\vec{w} + \vec{v}\cdot\vec{w}$
+
+따라서 위 내용을 정리하면 다음과 같다
+1. 제곱 길이: $\vec{u}\cdot\vec{u} = \|\|\vec{u}\|\|^{2}$
+2. 각도: $\theta = cos^{-1}\frac{\vec{u}\cdot\vec{v}}{\|\|\vec{u}\|\|\|\|\vec{v}\|\|}$
+3. projection: $\vec{v}_{\|\|} = \frac{(\vec{u}\cdot\vec{v})\vec{u}}{\vec{u}\cdot\vec{u}}$
+4. normal: $\vec{v}_\perp = \vec{v} - \frac{(\vec{u}\cdot\vec{v})\vec{u}}{\vec{u}\cdot\vec{u}}$
+5. 수직: $\vec{u}\cdot\vec{v} = 0 \Longleftrightarrow \vec{u} \perp \vec{v}$
+
+
+
+
 
 ### Vector Product
 
