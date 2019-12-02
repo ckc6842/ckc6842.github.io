@@ -110,7 +110,6 @@ Vector $\vec{v}$는 $\vec{u}$와 관련된 두 요소로 나타낼 수 있다.
 
 * $\vec{u}$로의 수직 vector $\vec{v}_{\perp}$: *normal component*
 * $\vec{u}$로의 수평 vector $\vec{v}_{\|\|}$: *orthogonal projection*
-*
 
 여기서 $$\vec{v}_{\perp} + \vec{v}_{\|} = \vec{v}$$ 이다.  
 
@@ -149,11 +148,31 @@ Dot product는 다음과 같은 중요한 특성들을 가지고 있다.
 4. normal: $\vec{v}_\perp = \vec{v} - \frac{(\vec{u}\cdot\vec{v})\vec{u}}{\vec{u}\cdot\vec{u}}$
 5. 수직: $\vec{u}\cdot\vec{v} = 0 \Longleftrightarrow \vec{u} \perp \vec{v}$
 
-
-
-
-
 ### Vector Product
+Vector pruduct는 *cross product*라고도 부른다.  
+Dot product와 마찬가지로 cross product도 두 vector 간의 각도와 관련이 있지만, 두 시작점이 맞닿아있는 vector가 만드는 평행사변형의 넓이를 정의하기도 한다.  
+
+평행하지 않은 두 vector $\vec{u}, \vec{v}$가 있을 때 이를 2차원 평면으로 정의할 수 있다.  
+만약 이 평면이 종이 위에 놓인 것이 아니라 공간 위에 떠있다고 생각해보면, dot product는 두 vector간의 각도는 구할 수 있지만 공간 상에 평면의 방향은 결정할 수 없다.  
+
+두 vector $\vec{u}, \vec{v}$의 cross product는 또 다른 vector $\vec{w}$로 정의할 수 있다.  
+$\vec{w}$는 $\vec{u}, \vec{v}$를 포함하는 평면에 수직이고, 길이는 두 vector 사이의 각도와 관련이 있다.  
+Cross product는 $\times$로 나타낸다.  
+정의와 관련된 특성들은 다음과 같다.  
+1. 두 vector의 cross product $\vec{w} = \vec{u}\times\vec{v}는 vector이다.$
+2. 두 vector의 cross product는 두 vector에 수직이다: dir$(\vec{u}\times\vec{v})\perp\vec{u},\vec{v}$
+3. 두 vector의 cross pruduct의 길이는 $\vec{u}, \vec{v}$로 이루어진 평행사변형의 넓이와 같다: $\|\|\vec{u}\times\vec{v}\|\| = Area(\vec{u}, \vec{v}) = \|\|\vec{u}\|\| \|\|\vec{v}\|\|sin\theta$
+   1. 만약 $\theta > 0$이면 넓이는 양수이고, $\theta < 0$이면 넓이는 음수이다. 따라서 만약 부호가 없는 넓이가 필요하다면 $sin\theta$의 절대 값을 사용해야 한다.
+
+$\vec{u}, \vec{v}$로 이루어진 평면에 수직인 vector는 윗 방향과 아랫 방향이 있다.  
+오른손 법칙에 따라 $\vec{u}, \vec{v}$ 사이의 각도 $\theta > 0$이면, cross product vector는 페이지 바깥쪽을 가리기고, $\theta < 0$이면 안쪽을 가리킬 것이다.
+
+Vector product의 또 다른 특성들은 다음과 같다.
+1. 교환법칙이 성립하지 않는다: $\vec{u}\times\vec{v} \neq \vec{v}\times\vec{u}$
+2. 분배 법칙이 성립한다.
+   1. $\vec{u}\times(\vec{v} + \vec{w}) = (\vec{u}\times\vec{v}) + (\vec{u}\times\vec{v})$
+   2. $(\alpha\vec{u})\times\vec{v} = \vec{u}\times(\alpha\vec{v}) = \alpha(\vec{u}\times\vec{v})$
+3. 평행성: $\vec{u}\|\|\vec{v} = \Longleftrightarrow \vec{u}\times\vec{v} = \vec{0}$
 
 
 ## Volume, The Determinant, and The Scalar Triple Product
