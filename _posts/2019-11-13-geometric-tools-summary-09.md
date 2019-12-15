@@ -1,5 +1,5 @@
 ---
-title: "Affine Space"
+title: "Affine Space 1"
 categories:
   - Computer Graphics
 tags:
@@ -173,24 +173,3 @@ Vector product의 또 다른 특성들은 다음과 같다.
    1. $\vec{u}\times(\vec{v} + \vec{w}) = (\vec{u}\times\vec{v}) + (\vec{u}\times\vec{v})$
    2. $(\alpha\vec{u})\times\vec{v} = \vec{u}\times(\alpha\vec{v}) = \alpha(\vec{u}\times\vec{v})$
 3. 평행성: $\vec{u}\|\|\vec{v} = \Longleftrightarrow \vec{u}\times\vec{v} = \vec{0}$
-
-
-## Volume, The Determinant, and The Scalar Triple Product
-
-
-## Frames
-
-
-## Affine Transformations
-
-### Types of Affine Maps
-
-### Composition of Affine Maps
-
-
-## Barycentric Coordinates and Simplexes
-
-### Barycentric Coordinates and Subspaces
-
-### Affine Independence
-
