@@ -84,9 +84,36 @@ Determinent, scalar triple product, 부피와 관련된 또다른 속성들은 �
 7. 오른손 basis vector들의 orthonormal space는 unit determinant를 갖는다.
 
 
-
 ## Frames
+Point들의 집합 $\mathcal{P}$와 $n$차원의 vector space $\mathcal{V}$로 정의되는 affine space $\mathcal{A}$에 대해서,  
+임의의 point $\mathcal{O} \in \mathcal{P}$와 basis $$\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n} \in \mathcal{V}$$ 를 선택했을 때,  
+이는 $\mathcal{A}$에 대한 $frame^{2}$을 형성한다.  
+Frame은 아래와 같이 표기한다.
 
+$$
+\mathcal{F} = (\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}, \mathcal{O})^{T}
+$$
+
+Vector sapce $\mathcal{V}$에서는 해당 space에 포함되어 있는 어떤 vector $\vec{u}$ 도 basis vector들의 집합의 linear comination으로 나타낼 수 있다.
+
+$$
+\vec{u} = a_{1}\vec{v}_{1} + a_{2}\vec{v}_{2} + \cdots + a_{n}\vec{v}_{n}
+$$
+
+여기서 $a_{1}, a_{2}, \dots, a_{n}$은 $\vec{u}$의 *coordinates*이며 basis $\vec{v}_{1}, \vec{v}_{2}, \dots, \vec{v}_{n}$과 관계가 있다.
+
+그렇다면 $\mathcal{P}$의 point들에 대해서는 어떨까?  
+Point $\mathcal{P}$와 vector $\vec{u}$가 있을 때, $\mathcal{Q} = \mathcal{P} + \vec{u}$인 유일한 point가 존재한다.  
+만약 $\mathcal{F}$에서 point $\mathcal{O}$를 $\mathcal{P}$로 고르면, point $\mathcal{Q} \in \mathcal{P}$는 특정 vector $\vec{u}$를 $\mathcal{O}$와 더한 것으로 정의할 수 있다.
+
+$$
+\begin{array}a
+\mathcal{Q} & = & \vec{u} + \mathcal{O} \\
+            & = & a_{1}\vec{v}_{1} + a_{2}\vec{v}_{2} + \cdots + a_{n}\vec{v}_{n} + \mathcal{O}
+\end{array}
+$$
+
+마찬가지로 $\mathcal{Q}$의 coordinates들은 $a_{1}, a_{2}, \dots, a_{n}$이다.
 
 ## Affine Transformations
 
