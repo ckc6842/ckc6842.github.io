@@ -115,7 +115,62 @@ $$
 
 마찬가지로 $\mathcal{Q}$의 coordinates들은 $a_{1}, a_{2}, \dots, a_{n}$이다.
 
+### 데카르트 좌표계의 Frames
+
+모든 vector $\vec{v}$는 *unit vector* $\hat{v}$ 와 관계가 있다.  
+Unit vector는 $\vec{v}$와 방향은 같지만, 길이가 1인 vector이다.  
+즉, unit vector는 $\vec{v}$를 그 길이로 나누면 구할 수 있다.
+
+$$
+\hat{v} = \frac{\vec{v}}{||\vec{v}||}
+$$
+
+이를 통해 basis vector들이 
+
 ## Affine Transformations
+*Affine transformation*은 어떤 affine space에 있는 point들과 vector들을 다른 affine space로 mapping 하는 것을 말한다.
+일반적으로, $T: \mathcal{A}^{n} \mapsto \mathcal{B}^{m}$가 affine transformation이려면, affine combination을 유지하고, $P_{i} \in \mathcal{A}$와 $\sum_{i=1}^{n}a_{1} = 1$을 만족해야 한다.
+
+$$
+T(a_{1}P_{1} + a_{2}P_{2} + \cdots + a_{n}P_{n}) = a_{1}T(P_{1}) + a_{2}T(P_{2}) + \cdots + a_{n}T(P_{n})
+$$
+
+주의해야 할 점은 차원 n과 m은 꼭 같을 필요는 없지만, $m \leq n$이 성립해야 한다.  
+그 이유는 affine transformation이 geometric object들을 대응되는 object들에 mapping하기 때문이다.
+
+앞서 affine combination에 대한 내용에서 point $R$을 같은 line 상에 있는 point $P$와 $Q$의 affine combination으로 나타내는 것을 보았다.
+
+$$
+R = (1 - \alpha)P + \alpha Q
+$$
+
+여기에 affine tranformation을 적용하면 다음과 같다.
+
+$$
+\begin{array}a
+T(R) & = & T((1 - \alpha)P + \alpha Q)\\
+     & = & (1 - \alpha)T(P) + \alpha T(Q)
+\end{array}
+$$
+
+이는 아래와 같이 line의 equation을 parametric equation으로 작성한 것과 매우 유사하다.
+
+$$
+R(t) = (1 - t)P + tQ
+$$
+
+상기 수식에 T를 적용하면 다음과 같다.
+
+$$
+\begin{array}a
+T(R(t)) & = & T((1 - t)P + tQ)
+        & = & (1 - t)T(P) + tT(Q)
+\end{array}
+$$
+
+즉, line의 parametric equation은 $P$와 $Q$에 의해 정의된다.  
+위 과정에서 상수들이 transformation T의 영향을 받지 않은 점이 중요한 점이다.
+
 
 ### Types of Affine Maps
 
