@@ -292,10 +292,21 @@ $$
 
 ### Types of Affine Maps
 
-### Composition of Affine Maps
+앞서 본 것과 같이 affine space $\mathcal{A}$ 내 vector 간의 affine transformation 연산은 linear transformation이다.  
+이에는 rotation과 scale이 적용된다. 왜냐하면 vector들은 position 정보가 없고, 이는 position과 연관된 translation과 같은 모든 연산을 배제한다.
+
+Affine transformation이 $\mathcal{A}.\mathcal{P}$와 $\mathcal{A}.\mathcal{V}$에 적용되면, relative postion을 포함한 transformation을 표현할 수 있다.
+* Translations
+* 임의의 line이나 plane에 대한 mirror or reflection
+* Parallel projection
+* 임의의 point에 대한 rotation
+* 임의의 line이나 plane과 연관된 shearing
+
 
 
 ## Barycentric Coordinates and Simplexes
+
+
 
 ### Barycentric Coordinates and Subspaces
 
