@@ -305,8 +305,32 @@ Affine transformation이 $\mathcal{A}.\mathcal{P}$와 $\mathcal{A}.\mathcal{V}$�
 
 
 ## Barycentric Coordinates and Simplexes
+앞서 살펴본 것과 같이 affine space는 vector space를 기반으로 한 basis vector들과 point로 정의할 수 있다.
 
+$$
+\begin{array}a
+\mathcal{Q} & = & \vec{u} + \mathcal{O} \\
+            & = & a_{1}\vec{v}_{1} + a_{2}\vec{v}_{2} + \cdots + a_{n}\vec{v}_{n} + \mathcal{O}
+\end{array}
+$$
 
+이에 대한 다른 대안은 basis point를 사용하는 것이다.  
+이는 basis vector들을 point $\mathcal{O}$와 더해서 얻은 point의 집합으로 구성한다.
+($$P_{0} = \mathcal{O}, P_{1} = \mathcal{O} + \vec{v}_{1}, P_{2} = \mathcal{O} + \vec{v}_{2}, \cdots, P_{n} = \mathcal{O} + \vec{v}_{n}$$)
+
+이를 통해 $\mathcal{Q} \in \mathcal{A}$인 point를 정리하면 다음과 같다.
+
+$$
+\mathcal{Q} = \mathcal{P}_{0}(1 - a_{1} - a_{2} - \cdots - a_{n}) + P_{1}a_{1} + P_{2}a_{2} + \cdots + P_{n}a_{n}
+$$
+
+또는 아래와 같이 정리할 수 있다.
+
+$$
+Q = P_{0}a_{0} + P_{1}a_{1} + \cdots + P_{n}a_{n}
+$$
+
+위의 식에서 $1 = a_{0} + a_{1} + \cdots + a_{n}$, 다시 말해 모든 계수의 합은 1이어야 한다.
 
 ### Barycentric Coordinates and Subspaces
 
